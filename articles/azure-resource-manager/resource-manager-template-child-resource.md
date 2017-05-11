@@ -26,7 +26,7 @@ The format of the child resource name is: `{parent-resource-name}/{child-resourc
 
 However, you specify the type and name in a template differently based on whether it is nested within the parent resource, or on its own at the top level. This topic shows how to handle both approaches.
 
-*Note:* When constructing a fully-qualified reference to a resource, perhaps for use within a "dependsOn", the order in which to combine segments from the type and name strings as above is not simply a concatenation of the two.  Instead, after the namespace, use a sequence of *type/name* pairs in least to most specific order: `{resource-provider-namespace}/{parent-resource-type}/{parent-resource-name}[/{child-resource-type}/{child-resource-name}]*`. 
+When constructing a fully-qualified reference to a resource, perhaps for use within a "dependsOn", the order in which to combine segments from the type and name strings as above is not simply a concatenation of the two.  Instead, after the namespace, use a sequence of *type/name* pairs in least to most specific order: `{resource-provider-namespace}/{parent-resource-type}/{parent-resource-name}[/{child-resource-type}/{child-resource-name}]*`. 
 For example, use `Microsoft.Compute/virtualMachines/myVM/extensions/myExt`, not  `Microsoft.Compute/virtualMachines/extensions/myVM/myExt`.
 
 ## Nested child resource
